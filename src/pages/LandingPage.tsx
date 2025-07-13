@@ -17,7 +17,8 @@ import {
   Security,
   Language,
   Phone,
-  Email
+  Email,
+  PhoneAndroid,
 } from '@mui/icons-material';
 import Layout from '../components/Layout';
 import { colors } from '../theme/colors';
@@ -99,6 +100,22 @@ const LandingPage: React.FC = () => {
           </Typography>
 
           <Grid container spacing={4}>
+            <Grid item xs={12} md={6}>
+              <Card sx={{ height: '100%' }}>
+                <CardContent sx={{ p: 4 }}>
+                  <PhoneAndroid sx={{ fontSize: 48, color: 'primary.main', mb: 2 }} />
+                  <Typography variant="h5" gutterBottom>
+                    Application Mobile Hors Ligne
+                  </Typography>
+                  <Typography color="text.secondary">
+                    Collectez des données sur le terrain même sans connexion internet. 
+                    Notre application mobile synchronise automatiquement vos données 
+                    une fois la connexion rétablie, parfait pour les zones rurales.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+
             <Grid item xs={12} md={6}>
               <Card sx={{ height: '100%' }}>
                 <CardContent sx={{ p: 4 }}>
@@ -206,9 +223,13 @@ const LandingPage: React.FC = () => {
                   textAlign: 'center'
                 }}
               >
-                <Typography variant="h2" color="primary.main" gutterBottom>
-                  🇸🇳
-                </Typography>
+                <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                  <img 
+                    src="/icon.svg" 
+                    alt="GokhBI" 
+                    style={{ width: '64px', height: '64px' }}
+                  />
+                </Box>
                 <Typography variant="h5" gutterBottom>
                   Conçu pour le Sénégal
                 </Typography>

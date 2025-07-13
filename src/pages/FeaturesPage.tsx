@@ -22,7 +22,29 @@ const FeaturesPage: React.FC = () => {
         <Container maxWidth="lg">
           <Paper sx={{ p: 6, mb: 4 }}>
             <Typography variant="h4" gutterBottom>
-              🗺️ Cartographie Interactive
+              � Application Mobile Hors Ligne
+            </Typography>
+            <Typography paragraph>
+              Collectez des données sur le terrain même sans connexion internet. 
+              Notre application mobile permet aux agents municipaux de continuer leur travail 
+              de collecte de données dans les zones avec une connectivité limitée. 
+              Synchronisation automatique dès que la connexion est rétablie.
+            </Typography>
+            <Typography paragraph>
+              <strong>Fonctionnalités clés :</strong>
+            </Typography>
+            <Typography component="ul" sx={{ pl: 2 }}>
+              <li>Collecte de données hors ligne complète</li>
+              <li>Géolocalisation GPS intégrée</li>
+              <li>Prise de photos et capture de signatures</li>
+              <li>Synchronisation automatique bidirectionnelle</li>
+              <li>Interface optimisée pour le terrain</li>
+            </Typography>
+          </Paper>
+
+          <Paper sx={{ p: 6, mb: 4 }}>
+            <Typography variant="h4" gutterBottom>
+              �🗺️ Cartographie Interactive
             </Typography>
             <Typography paragraph>
               Système SIG complet pour visualiser et gérer l'ensemble de votre territoire.

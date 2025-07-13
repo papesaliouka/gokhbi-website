@@ -100,10 +100,18 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                   color: 'white', 
                   textTransform: 'none',
                   fontSize: '1.5rem',
-                  fontWeight: 'bold'
+                  fontWeight: 'bold',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1
                 }}
               >
-                🇸🇳 GokhBI
+                <img 
+                  src="/icon.svg" 
+                  alt="GokhBI" 
+                  style={{ width: '64px', height: '64px' }}
+                />
+                GokhBI
               </Button>
             </Box>
 
@@ -173,9 +181,16 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
             {/* Company Info */}
             <Box sx={{ flex: 1 }}>
-              <Typography variant="h6" gutterBottom>
-                🇸🇳 GokhBI
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
+                <img 
+                  src="/icon.svg" 
+                  alt="GokhBI" 
+                  style={{ width: '24px', height: '24px' }}
+                />
+                <Typography variant="h6">
+                  GokhBI
+                </Typography>
+              </Box>
               <Typography variant="body2" color="grey.400" paragraph>
                 Moderniser la gestion urbaine au Sénégal avec des solutions technologiques adaptées.
               </Typography>
