@@ -44,7 +44,7 @@ const PrivacyPolicy: React.FC = () => {
             </Typography>
             <Typography>
               Pour toute question concernant cette politique de confidentialité, 
-              contactez-nous à : contact@gokhbi.com
+              contactez-nous à : papesaliouka@gmail.com
             </Typography>
           </Paper>
         </Container>

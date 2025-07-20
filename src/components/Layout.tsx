@@ -38,7 +38,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     { label: 'Accueil', path: '/' },
     { label: 'Fonctionnalités', path: '/features' },
     { label: 'À Propos', path: '/about' },
-    { label: 'Contact', path: '/contact' }
+    { label: 'Contact', path: '/contact' },
+    { label: '📄 Brochure', path: '/GokhBI-Brochure-Produit-Senegal.pdf', isDownload: true }
   ];
 
   const handleNavigation = (path: string) => {
@@ -65,17 +66,30 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Divider />
         <List>
           {navigationItems.map((item) => (
-            <ListItem
-              key={item.path}
-              button
-              onClick={() => handleNavigation(item.path)}
-              sx={{
-                backgroundColor: isActivePage(item.path) ? 'primary.light' : 'transparent',
-                color: isActivePage(item.path) ? 'white' : 'inherit'
-              }}
-            >
-              <ListItemText primary={item.label} />
-            </ListItem>
+            item.isDownload ? (
+              <ListItem
+                key={item.path}
+                button
+                component="a"
+                href={item.path}
+                download="GokhBI-Brochure.pdf"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <ListItemText primary={item.label} />
+              </ListItem>
+            ) : (
+              <ListItem
+                key={item.path}
+                button
+                onClick={() => handleNavigation(item.path)}
+                sx={{
+                  backgroundColor: isActivePage(item.path) ? 'primary.light' : 'transparent',
+                  color: isActivePage(item.path) ? 'white' : 'inherit'
+                }}
+              >
+                <ListItemText primary={item.label} />
+              </ListItem>
+            )
           ))}
           <Divider sx={{ my: 1 }} />
           <ListItem button onClick={() => window.location.href = 'https://app.gokhbi.com/login'}>
@@ -119,20 +133,38 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             {!isMobile && (
               <Box sx={{ display: 'flex', alignItems: 'center', ml: 'auto' }}>
                 {navigationItems.map((item) => (
-                  <Button
-                    key={item.path}
-                    onClick={() => handleNavigation(item.path)}
-                    sx={{
-                      color: 'white',
-                      mx: 1,
-                      backgroundColor: isActivePage(item.path) ? 'rgba(255,255,255,0.1)' : 'transparent',
-                      '&:hover': {
-                        backgroundColor: 'rgba(255,255,255,0.1)'
-                      }
-                    }}
-                  >
-                    {item.label}
-                  </Button>
+                  item.isDownload ? (
+                    <Button
+                      key={item.path}
+                      component="a"
+                      href={item.path}
+                      download="GokhBI-Brochure-Produit-Senegal.pdf"
+                      sx={{
+                        color: 'white',
+                        mx: 1,
+                        '&:hover': {
+                          backgroundColor: 'rgba(255,255,255,0.1)'
+                        }
+                      }}
+                    >
+                      {item.label}
+                    </Button>
+                  ) : (
+                    <Button
+                      key={item.path}
+                      onClick={() => handleNavigation(item.path)}
+                      sx={{
+                        color: 'white',
+                        mx: 1,
+                        backgroundColor: isActivePage(item.path) ? 'rgba(255,255,255,0.1)' : 'transparent',
+                        '&:hover': {
+                          backgroundColor: 'rgba(255,255,255,0.1)'
+                        }
+                      }}
+                    >
+                      {item.label}
+                    </Button>
+                  )
                 ))}
                 <Button
                   variant="outlined"
@@ -211,6 +243,14 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link href="/contact" color="grey.400" underline="hover">
                   Contact
                 </Link>
+                <Link 
+                  href="/GokhBI-Brochure-Produit-Senegal.pdf" 
+                  download="GokhBI-Brochure-Produit-Senegal.pdf"
+                  color="grey.400" 
+                  underline="hover"
+                >
+                  📄 Télécharger Brochure
+                </Link>
                 <Link href="https://app.gokhbi.com/login" color="grey.400" underline="hover">
                   Connexion
                 </Link>
@@ -238,7 +278,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Contact
               </Typography>
               <Typography variant="body2" color="grey.400">
-                Email: contact@gokhbi.com
+                Email: papesaliouka@gmail.com
               </Typography>
               <Typography variant="body2" color="grey.400">
                 Dakar, Sénégal

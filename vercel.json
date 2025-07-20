@@ -12,6 +12,10 @@
       "dest": "/icon.svg"
     },
     {
+      "src": "/GokhBI-Brochure-Produit-Senegal.pdf",
+      "dest": "/GokhBI-Brochure-Produit-Senegal.pdf"
+    },
+    {
       "src": "/(privacy|terms|about|features|contact)",
       "dest": "/index.html"
     },

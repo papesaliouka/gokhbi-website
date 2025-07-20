@@ -30,7 +30,16 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    // Create mailto link with form data
+    const subject = encodeURIComponent('Contact depuis le site GokhBI');
+    const body = encodeURIComponent(
+      `Nom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:papesaliouka@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     setShowSuccess(true);
     setFormData({ name: '', email: '', message: '' });
   };
@@ -41,10 +50,10 @@ const ContactPage: React.FC = () => {
       <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 6 }}>
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom>
-            Contactez-Nous
+            📞 Contactez-Nous Dès Aujourd'hui
           </Typography>
           <Typography variant="h5" sx={{ opacity: 0.9 }}>
-            Nous sommes là pour vous accompagner
+            Demandez votre démonstration gratuite !
           </Typography>
         </Container>
       </Box>
@@ -106,15 +115,68 @@ const ContactPage: React.FC = () => {
             </Box>
 
             <Box sx={{ mt: 6, pt: 4, borderTop: 1, borderColor: 'divider' }}>
-              <Typography variant="h6" gutterBottom>
-                Autres moyens de nous contacter
+              <Typography variant="h6" gutterBottom color="primary.main">
+                🏢 GokhBI Sénégal
               </Typography>
-              <Typography>
-                Email: contact@gokhbi.com
+              <Typography paragraph>
+                📍 <strong>Adresse :</strong> Rufisque, Sénégal
               </Typography>
-              <Typography>
-                Adresse: Dakar, Sénégal
+              <Typography paragraph>
+                📞 <strong>Téléphone :</strong> +221 77 206 10 56
               </Typography>
+              <Typography paragraph>
+                📱 <strong>WhatsApp :</strong> +221 77 206 10 56
+              </Typography>
+              <Typography paragraph>
+                📧 <strong>Email :</strong> papesaliouka@gmail.com
+              </Typography>
+              <Typography paragraph>
+                🌐 <strong>Site web :</strong> www.gokhbi.com
+              </Typography>
+              
+              <Box sx={{ mt: 4, p: 3, bgcolor: 'primary.light', borderRadius: 2 }}>
+                <Typography variant="h6" gutterBottom color="white">
+                  👤 Pape Saliou Ka - Directeur Commercial
+                </Typography>
+                <Typography color="white">
+                  🎓 Ingénieur formé au Sénégal
+                </Typography>
+                <Typography color="white">
+                  💼 Expert solutions municipales
+                </Typography>
+                <Typography color="white">
+                  📱 WhatsApp direct : +221 77 206 10 56
+                </Typography>
+              </Box>
+              
+              <Box sx={{ mt: 3, p: 2, bgcolor: 'success.light', borderRadius: 2, textAlign: 'center' }}>
+                <Typography variant="h6" color="white" fontWeight="bold">
+                  📞 Appelez maintenant pour votre démonstration gratuite !
+                </Typography>
+              </Box>
+              
+              <Box sx={{ mt: 3, p: 2, bgcolor: 'info.light', borderRadius: 2, textAlign: 'center' }}>
+                <Typography variant="h6" color="white" fontWeight="bold" gutterBottom>
+                  📄 Documentation Complète
+                </Typography>
+                <Typography variant="body2" color="white" sx={{ mb: 2, opacity: 0.9 }}>
+                  Téléchargez notre brochure avec tous les détails techniques et tarifs
+                </Typography>
+                <Button
+                  variant="contained"
+                  href="/GokhBI-Brochure-Produit-Senegal.pdf"
+                  download="GokhBI-Brochure-Produit-Senegal.pdf"
+                  sx={{ 
+                    bgcolor: 'white', 
+                    color: 'info.main',
+                    '&:hover': { 
+                      bgcolor: 'grey.100'
+                    }
+                  }}
+                >
+                  📄 Télécharger la Brochure
+                </Button>
+              </Box>
             </Box>
           </Paper>
         </Container>
