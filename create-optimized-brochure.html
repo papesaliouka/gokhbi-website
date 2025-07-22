@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GokhBI - Brochure Optimisée</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 15mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: white;
+            page-break-after: always;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .logo {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #1976d2;
+            border-bottom: 3px solid #1976d2;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+        
+        .pilot-banner {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            page-break-inside: avoid;
+        }
+        
+        .pilot-banner .title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .problems-solutions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .problems, .solutions {
+            flex: 1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .problems {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+        }
+        
+        .solutions {
+            background: #f0fdf4;
+            border-left: 4px solid #48bb78;
+        }
+        
+        .workflow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        .workflow-step {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .workflow-icon {
+            width: 50px;
+            height: 50px;
+            background: #1976d2;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 auto 8px auto;
+        }
+        
+        .workflow-arrow {
+            font-size: 20px;
+            color: #1976d2;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        .module-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .module-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid #d97706;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .price {
+            font-size: 24px;
+            color: #d97706;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        
+        .example {
+            background: #fef3c7;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #92400e;
+            margin: 10px 0;
+        }
+        
+        .founder-message {
+            background: #1976d2;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .founder-quote {
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .founder-info {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        
+        .contact-info {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        .metric-card {
+            background: white;
+            border: 2px solid #1976d2;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 20px;
+            color: #1976d2;
+            font-weight: bold;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .problems li:before {
+            content: "✗";
+            color: #f56565;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .page { 
+                margin: 0; 
+                box-shadow: none;
+                page-break-after: always;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .workflow {
+                page-break-inside: avoid;
+            }
+            
+            .problems-solutions {
+                page-break-inside: avoid;
+            }
+            
+            .metrics {
+                page-break-inside: avoid;
+            }
+            
+            .pricing-grid {
+                page-break-inside: avoid;
+            }
+            
+            .founder-message {
+                page-break-inside: avoid;
+            }
+            
+            .contact-info {
+                page-break-inside: avoid;
+            }
+            
+            .pilot-banner {
+                page-break-inside: avoid;
+            }
+            
+            h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <img src="public/icon.svg" alt="GokhBI Logo" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 10px;">
+                GokhBI
+            </div>
+            <div class="tagline">Plateforme de Gestion Territoriale Intelligente pour le Sénégal</div>
+            <div style="margin-top: 10px; font-size: 16px;">
+                "Transformez vos cahiers en système numérique moderne"
+            </div>
+        </div>
+
+        <!-- Pilot Program Banner -->
+        <div class="pilot-banner">
+            <div class="title">🎁 Participez Gratuitement à Notre Phase Pilote</div>
+            <div>Actuellement en phase pilote avec plusieurs communes intéressées.<br>
+            Rejoignez-nous pour co-construire les premiers cas d'usage adaptés à vos besoins spécifiques.</div>
+        </div>
+
+        <!-- Problems vs Solutions -->
+        <div class="problems-solutions">
+            <div class="problems">
+                <h3 style="color: #f56565; margin-bottom: 15px;">❌ Vos Problèmes Actuels</h3>
+                <ul>
+                    <li>Plaintes citoyens perdues dans des cahiers</li>
+                    <li>Semaines d'attente pour traiter une demande</li>
+                    <li>Collecte manuelle sans validation terrain</li>
+                    <li>Dépendance Internet pour tout saisir</li>
+                    <li>Aucune géolocalisation des données</li>
+                    <li>Pas de données fiables pour bailleurs</li>
+                </ul>
+            </div>
+            <div class="solutions">
+                <h3 style="color: #48bb78; margin-bottom: 15px;">✅ Votre Nouvelle Réalité</h3>
+                <ul>
+                    <li>Collecte données hors-ligne</li>
+                    <li>Supervision temps réel</li>
+                    <li>Photos géolocalisées</li>
+                    <li>Synchro automatique</li>
+                    <li>Tableaux de bord intelligents</li>
+                    <li>Rapports automatiques pour financements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Workflow -->
+        <div class="section">
+            <h2 class="section-title">🔄 Comment ça Marche ? (Workflow Simple)</h2>
+            <div class="workflow">
+                <div class="workflow-step">
+                    <div class="workflow-icon">📱</div>
+                    <strong>1. Collecte Terrain</strong><br>
+                    <small>Agent collecte avec app mobile (hors-ligne)</small>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">☁️</div>
+                    <strong>2. Synchro Auto</strong><br>
+                    <small>Données uploadées au serveur</small>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">📊</div>
+                    <strong>3. Supervision</strong><br>
+                    <small>Visualisation dashboard web</small>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">📄</div>
+                    <strong>4. Rapports</strong><br>
+                    <small>Génération automatique</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+        <!-- Objectives -->
+        <div class="section">
+            <h2 class="section-title">📊 Objectifs de Performance Visés</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 15px;">
+                Basé sur notre analyse des problèmes actuels et les retours terrain
+            </p>
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-value">-60%</div>
+                    <div>Temps traitement</div>
+                    <small>(3 semaines → 3 jours)</small>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">+200%</div>
+                    <div>Satisfaction citoyens</div>
+                    <small>Suivi transparent</small>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">-50%</div>
+                    <div>Papier/Impression</div>
+                    <small>Dématérialisation</small>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">+300%</div>
+                    <div>Données fiables</div>
+                    <small>Pour financements</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modules -->
+        <div class="section">
+            <h2 class="section-title">🎪 Modules Disponibles</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 15px; font-size: 14px;">
+                <strong>📍 Cartographie & géolocalisation intégrées dans tous les modules</strong>
+            </p>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-icon">📍</div>
+                    <strong>Gestion Plaintes</strong>
+                    <ul style="font-size: 12px; margin-top: 10px;">
+                        <li>Réception auto mobile</li>
+                        <li>Suivi temps réel</li>
+                        <li>Notifications citoyens</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📊</div>
+                    <strong>Collecte Données</strong>
+                    <ul style="font-size: 12px; margin-top: 10px;">
+                        <li>Enquêtes mobiles</li>
+                        <li>Formulaires offline</li>
+                        <li>Validation terrain</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">🏗️</div>
+                    <strong>Infrastructures</strong>
+                    <ul style="font-size: 12px; margin-top: 10px;">
+                        <li>Inventaire patrimoine</li>
+                        <li>Suivi maintenance</li>
+                        <li>État des équipements</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📋</div>
+                    <strong>Autorisations</strong>
+                    <ul style="font-size: 12px; margin-top: 10px;">
+                        <li>Permis construire</li>
+                        <li>Licences commerciales</li>
+                        <li>Workflow validation</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📱</div>
+                    <strong>App Mobile</strong>
+                    <ul style="font-size: 12px; margin-top: 10px;">
+                        <li>Collecte hors-ligne</li>
+                        <li>GPS intégré</li>
+                        <li>Photos/Signatures</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">💻</div>
+                    <strong>Interface Web</strong>
+                    <ul style="font-size: 12px; margin-top: 10px;">
+                        <li>Tableaux de bord</li>
+                        <li>Rapports automatiques</li>
+                        <li>Analytics avancées</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="section">
+            <h2 class="section-title">💰 Tarification Adaptée au Sénégal</h2>
+            <p style="text-align: center; color: #92400e; margin-bottom: 20px;">
+                Scénarios types pour vous aider à vous projeter
+            </p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>🏘️ Communes Rurales</h3>
+                    <div class="price">250K FCFA/mois</div>
+                    <div class="example">
+                        <strong>Exemple :</strong> Commune 30K habitants, 3 agents
+                    </div>
+                    <ul style="font-size: 12px;">
+                        <li>App mobile + Web</li>
+                        <li>Jusqu'à 10 agents terrain</li>
+                        <li>Modules de base</li>
+                        <li>Support WhatsApp</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>🏙️ Communes Urbaines</h3>
+                    <div class="price">800K FCFA/mois</div>
+                    <div class="example">
+                        <strong>Exemple :</strong> Commune 100K habitants, 15 agents
+                    </div>
+                    <ul style="font-size: 12px;">
+                        <li>App + Web illimités</li>
+                        <li>Agents terrain illimités</li>
+                        <li>Tous modules + formation</li>
+                        <li>Support prioritaire</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>🌍 ONGs/Projets</h3>
+                    <div class="price">100K FCFA/mois</div>
+                    <div class="example">
+                        <strong>Exemple :</strong> ONG projet local, 5 enquêteurs
+                    </div>
+                    <ul style="font-size: 12px;">
+                        <li>App mobile incluse</li>
+                        <li>Jusqu'à 5 enquêteurs</li>
+                        <li>Collecte données focus</li>
+                        <li>Support communautaire</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: #28a745; color: white; padding: 15px; border-radius: 8px; text-align: center; margin-top: 20px;">
+                <strong>🎁 OFFRE SPÉCIALE LANCEMENT :</strong> 6 mois gratuits pour les 3 premières communes pilotes
+            </div>
+        </div>
+
+        <!-- Founder Message -->
+        <div class="founder-message">
+            <h3 style="margin-bottom: 15px;">💬 Mot du Fondateur</h3>
+            <div class="founder-quote">
+                "Je suis passionné par l'impact local de la technologie. GokhBI est né de l'observation 
+                de problèmes concrets dans nos communes : des cahiers perdus, des citoyens frustrés, 
+                des agents submergés par la paperasse."
+            </div>
+            <p>
+                Aujourd'hui, je veux construire cette solution avec vous, pas pour vous. 
+                Chaque commune a ses spécificités, chaque ONG ses priorités. 
+                C'est pourquoi nous proposons une phase pilote gratuite pour co-construire 
+                la solution qui répond vraiment à vos besoins.
+            </p>
+            <div class="founder-info">
+                <strong>Pape Saliouka Ciss</strong><br>
+                Fondateur & Développeur Principal, GokhBI<br>
+                📍 Dakar, Sénégal
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-info">
+            <h3 style="color: #1976d2; margin-bottom: 15px;">📞 Contactez-Nous pour Rejoindre le Programme Pilote</h3>
+            <div style="display: flex; justify-content: space-around; text-align: center;">
+                <div>
+                    <strong>📧 Email</strong><br>
+                    papesaliouka@gmail.com
+                </div>
+                <div>
+                    <strong>📱 WhatsApp</strong><br>
+                    +221 77 206 10 56
+                </div>
+                <div>
+                    <strong>🌐 Web</strong><br>
+                    www.gokhbi.com
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding: 15px; background: #1976d2; color: white; border-radius: 8px;">
+                <strong>🚀 Prêt à moderniser votre municipalité ?</strong><br>
+                Contactez-nous pour une démonstration gratuite et rejoindre notre programme pilote !
+            </div>
+        </div>
+    </div>
+</body>
+</html>

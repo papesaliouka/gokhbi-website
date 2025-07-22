@@ -26,6 +26,46 @@ import { colors } from '../theme/colors';
 const LandingPage: React.FC = () => {
   return (
     <Layout>
+      {/* Pilot Program Call-to-Action */}
+      <Box
+        sx={{
+          background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+          color: 'white',
+          py: 6,
+          textAlign: 'center'
+        }}
+      >
+        <Container maxWidth="md">
+          <Typography variant="h3" component="h2" gutterBottom fontWeight="bold">
+            🎁 Participez Gratuitement à Notre Phase Pilote
+          </Typography>
+          <Typography variant="h6" paragraph sx={{ opacity: 0.9, mb: 4 }}>
+            Actuellement en phase pilote avec plusieurs communes intéressées. 
+            Rejoignez-nous pour co-construire les premiers cas d'usage adaptés à vos besoins spécifiques.
+          </Typography>
+          <Button
+            variant="contained"
+            size="large"
+            href="/contact"
+            sx={{ 
+              bgcolor: 'white', 
+              color: 'success.main',
+              fontWeight: 'bold',
+              px: 4,
+              py: 1.5,
+              fontSize: '1.1rem',
+              '&:hover': { 
+                bgcolor: 'grey.100',
+                transform: 'translateY(-2px)',
+                boxShadow: '0px 6px 20px rgba(0,0,0,0.25)'
+              }
+            }}
+          >
+            🚀 Rejoindre le Programme Pilote
+          </Button>
+        </Container>
+      </Box>
+
       {/* Hero Section */}
       <Box
         sx={{
@@ -211,6 +251,165 @@ const LandingPage: React.FC = () => {
         </Container>
       </Box>
 
+      {/* Visual Workflow Section */}
+      <Box sx={{ py: 8, bgcolor: 'primary.main', color: 'white' }}>
+        <Container maxWidth="lg">
+          <Typography variant="h3" textAlign="center" gutterBottom fontWeight="bold">
+            🔄 Comment ça Marche ? (Workflow Simple)
+          </Typography>
+          <Typography variant="h6" textAlign="center" sx={{ mb: 6, opacity: 0.9 }}>
+            Un processus en 4 étapes pour transformer votre gestion territoriale
+          </Typography>
+
+          <Grid container spacing={4} sx={{ alignItems: 'center' }}>
+            {/* Step 1 */}
+            <Grid item xs={12} md={3}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box 
+                  sx={{ 
+                    width: 80, 
+                    height: 80, 
+                    bgcolor: 'white', 
+                    borderRadius: '50%', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    mx: 'auto',
+                    mb: 2,
+                    fontSize: '2rem'
+                  }}
+                >
+                  📱
+                </Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  1. Collecte Terrain
+                </Typography>
+                <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                  Agent collecte données avec app mobile (mode hors-ligne)
+                </Typography>
+              </Box>
+            </Grid>
+
+            {/* Arrow 1 */}
+            <Grid item xs={12} md={1}>
+              <Box sx={{ textAlign: 'center', fontSize: '2rem' }}>
+                →
+              </Box>
+            </Grid>
+
+            {/* Step 2 */}
+            <Grid item xs={12} md={2}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box 
+                  sx={{ 
+                    width: 80, 
+                    height: 80, 
+                    bgcolor: 'white', 
+                    borderRadius: '50%', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    mx: 'auto',
+                    mb: 2,
+                    fontSize: '2rem'
+                  }}
+                >
+                  ☁️
+                </Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  2. Synchro Auto
+                </Typography>
+                <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                  Données uploadées au serveur sécurisé
+                </Typography>
+              </Box>
+            </Grid>
+
+            {/* Arrow 2 */}
+            <Grid item xs={12} md={1}>
+              <Box sx={{ textAlign: 'center', fontSize: '2rem' }}>
+                →
+              </Box>
+            </Grid>
+
+            {/* Step 3 */}
+            <Grid item xs={12} md={2}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box 
+                  sx={{ 
+                    width: 80, 
+                    height: 80, 
+                    bgcolor: 'white', 
+                    borderRadius: '50%', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    mx: 'auto',
+                    mb: 2,
+                    fontSize: '2rem'
+                  }}
+                >
+                  📊
+                </Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  3. Supervision
+                </Typography>
+                <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                  Gestionnaire visualise sur dashboard web
+                </Typography>
+              </Box>
+            </Grid>
+
+            {/* Arrow 3 */}
+            <Grid item xs={12} md={1}>
+              <Box sx={{ textAlign: 'center', fontSize: '2rem' }}>
+                →
+              </Box>
+            </Grid>
+
+            {/* Step 4 */}
+            <Grid item xs={12} md={2}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Box 
+                  sx={{ 
+                    width: 80, 
+                    height: 80, 
+                    bgcolor: 'white', 
+                    borderRadius: '50%', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    mx: 'auto',
+                    mb: 2,
+                    fontSize: '2rem'
+                  }}
+                >
+                  📄
+                </Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  4. Rapports
+                </Typography>
+                <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                  Génération automatique de rapports
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Box sx={{ 
+            mt: 4, 
+            p: 3, 
+            bgcolor: 'rgba(255,255,255,0.1)', 
+            borderRadius: 2,
+            textAlign: 'center'
+          }}>
+            <Typography variant="h6">
+              🚀 <strong>Le tout en temps réel</strong> avec géolocalisation et photos !
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+
       {/* Features Section */}
       <Box sx={{ py: 8 }}>
         <Container maxWidth="lg">
@@ -331,12 +530,15 @@ const LandingPage: React.FC = () => {
       <Box sx={{ py: 8, bgcolor: 'grey.50' }}>
         <Container maxWidth="lg">
           <Typography variant="h3" textAlign="center" gutterBottom>
-            📊 Résultats Concrets
+            📊 Objectifs de Performance Visés
+          </Typography>
+          <Typography variant="h6" textAlign="center" sx={{ mb: 4, color: 'text.secondary' }}>
+            Basé sur notre analyse des problèmes actuels et les retours terrain
           </Typography>
           <Grid container spacing={4} sx={{ mt: 2 }}>
             <Grid item xs={12} md={3}>
               <Card sx={{ textAlign: 'center', p: 3 }}>
-                <Typography variant="h3" color="success.main" fontWeight="bold">
+                <Typography variant="h3" color="primary.main" fontWeight="bold">
                   -60%
                 </Typography>
                 <Typography variant="h6">Temps traitement</Typography>
@@ -347,7 +549,7 @@ const LandingPage: React.FC = () => {
             </Grid>
             <Grid item xs={12} md={3}>
               <Card sx={{ textAlign: 'center', p: 3 }}>
-                <Typography variant="h3" color="success.main" fontWeight="bold">
+                <Typography variant="h3" color="primary.main" fontWeight="bold">
                   +200%
                 </Typography>
                 <Typography variant="h6">Satisfaction citoyens</Typography>
@@ -358,7 +560,7 @@ const LandingPage: React.FC = () => {
             </Grid>
             <Grid item xs={12} md={3}>
               <Card sx={{ textAlign: 'center', p: 3 }}>
-                <Typography variant="h3" color="success.main" fontWeight="bold">
+                <Typography variant="h3" color="primary.main" fontWeight="bold">
                   -50%
                 </Typography>
                 <Typography variant="h6">Papier/Impression</Typography>
@@ -369,7 +571,7 @@ const LandingPage: React.FC = () => {
             </Grid>
             <Grid item xs={12} md={3}>
               <Card sx={{ textAlign: 'center', p: 3 }}>
-                <Typography variant="h3" color="success.main" fontWeight="bold">
+                <Typography variant="h3" color="primary.main" fontWeight="bold">
                   +300%
                 </Typography>
                 <Typography variant="h6">Données fiables</Typography>
@@ -382,11 +584,56 @@ const LandingPage: React.FC = () => {
         </Container>
       </Box>
 
+      {/* Founder Message Section */}
+      <Box sx={{ py: 8, bgcolor: 'primary.main', color: 'white' }}>
+        <Container maxWidth="md">
+          <Box sx={{ textAlign: 'center', mb: 4 }}>
+            <Typography variant="h4" gutterBottom fontWeight="bold">
+              💬 Mot du Fondateur
+            </Typography>
+          </Box>
+          <Paper 
+            sx={{ 
+              p: 4, 
+              bgcolor: 'rgba(255,255,255,0.1)', 
+              border: '1px solid rgba(255,255,255,0.2)',
+              textAlign: 'center'
+            }}
+          >
+            <Typography variant="h6" paragraph sx={{ fontStyle: 'italic', mb: 3 }}>
+              "Je suis passionné par l'impact local de la technologie. GokhBI est né de l'observation 
+              de problèmes concrets dans nos communes : des cahiers perdus, des citoyens frustrés, 
+              des agents submergés par la paperasse."
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Aujourd'hui, je veux construire cette solution avec vous, pas pour vous. 
+              Chaque commune a ses spécificités, chaque ONG ses priorités. 
+              C'est pourquoi nous proposons une phase pilote gratuite pour co-construire 
+              la solution qui répond vraiment à vos besoins.
+            </Typography>
+            <Box sx={{ mt: 3, pt: 2, borderTop: '1px solid rgba(255,255,255,0.2)' }}>
+              <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
+                Pape Saliouka Ciss
+              </Typography>
+              <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                Fondateur & Développeur Principal, GokhBI
+              </Typography>
+              <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                📍 Dakar, Sénégal
+              </Typography>
+            </Box>
+          </Paper>
+        </Container>
+      </Box>
+
       {/* Pricing Section */}
       <Box sx={{ py: 8, bgcolor: '#fef3c7' }}>
         <Container maxWidth="lg">
           <Typography variant="h3" textAlign="center" gutterBottom color="#d97706">
             💰 Tarification Adaptée au Sénégal
+          </Typography>
+          <Typography variant="h6" textAlign="center" sx={{ mb: 4, color: '#92400e' }}>
+            Scénarios types pour vous aider à vous projeter
           </Typography>
           <Grid container spacing={4} sx={{ mt: 2 }}>
             <Grid item xs={12} md={4}>
@@ -396,8 +643,13 @@ const LandingPage: React.FC = () => {
                     🏘️ Communes Rurales
                   </Typography>
                   <Typography variant="h4" color="#d97706" fontWeight="bold" sx={{ my: 2 }}>
-                    150K - 500K FCFA/mois
+                    250K FCFA/mois
                   </Typography>
+                  <Box sx={{ bgcolor: '#fef3c7', p: 2, borderRadius: 1, mb: 2 }}>
+                    <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#92400e' }}>
+                      Exemple : Commune 30K habitants, 3 agents
+                    </Typography>
+                  </Box>
                   <Box component="ul" sx={{ textAlign: 'left' }}>
                     <li>App mobile + Web</li>
                     <li>Jusqu'à 10 agents terrain</li>
@@ -414,8 +666,13 @@ const LandingPage: React.FC = () => {
                     🏙️ Communes Urbaines
                   </Typography>
                   <Typography variant="h4" color="#d97706" fontWeight="bold" sx={{ my: 2 }}>
-                    500K - 2M FCFA/mois
+                    800K FCFA/mois
                   </Typography>
+                  <Box sx={{ bgcolor: '#fef3c7', p: 2, borderRadius: 1, mb: 2 }}>
+                    <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#92400e' }}>
+                      Exemple : Commune 100K habitants, 15 agents
+                    </Typography>
+                  </Box>
                   <Box component="ul" sx={{ textAlign: 'left' }}>
                     <li>App + Web illimités</li>
                     <li>Agents terrain illimités</li>
@@ -432,8 +689,13 @@ const LandingPage: React.FC = () => {
                     🌍 ONGs/Projets
                   </Typography>
                   <Typography variant="h4" color="#d97706" fontWeight="bold" sx={{ my: 2 }}>
-                    50K - 200K FCFA/mois
+                    100K FCFA/mois
                   </Typography>
+                  <Box sx={{ bgcolor: '#fef3c7', p: 2, borderRadius: 1, mb: 2 }}>
+                    <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#92400e' }}>
+                      Exemple : ONG projet local, 5 enquêteurs
+                    </Typography>
+                  </Box>
                   <Box component="ul" sx={{ textAlign: 'left' }}>
                     <li>App mobile incluse</li>
                     <li>Jusqu'à 5 enquêteurs</li>
