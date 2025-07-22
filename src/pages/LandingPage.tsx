@@ -613,7 +613,7 @@ const LandingPage: React.FC = () => {
             </Typography>
             <Box sx={{ mt: 3, pt: 2, borderTop: '1px solid rgba(255,255,255,0.2)' }}>
               <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
-                Pape Saliouka Ciss
+                Pape Saliou Ka
               </Typography>
               <Typography variant="body2" sx={{ opacity: 0.8 }}>
                 Fondateur & Développeur Principal, GokhBI
