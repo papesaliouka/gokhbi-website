@@ -66,37 +66,64 @@ export const createThemeOptions = (mode: 'light' | 'dark' = 'light'): ThemeOptio
           textTransform: 'none',
           borderRadius: shape.borderRadius,
           padding: `${SPACING.sm} ${SPACING.lg}`,
-          boxShadow: 'none',
           fontWeight: 600,
-          '&:hover': {
-            boxShadow: '0px 2px 4px rgba(0,0,0,0.1)',
-          },
+          fontSize: '0.95rem',
+          minHeight: '44px', // Améliore l'accessibilité tactile
+          transition: 'all 0.2s ease-in-out',
         },
         contained: {
-          boxShadow: '0px 1px 3px rgba(0,0,0,0.12)',
+          boxShadow: `0px 2px 4px ${colors.button.primary.shadow}`,
           '&:hover': {
-            boxShadow: '0px 2px 6px rgba(0,0,0,0.15)',
+            boxShadow: `0px 4px 8px ${colors.button.primary.shadow}`,
+            transform: 'translateY(-1px)',
+          },
+          '&:active': {
+            transform: 'translateY(0px)',
           },
         },
         containedPrimary: {
-          background: 'linear-gradient(135deg, #2563eb 0%, #059669 100%)',
-          color: colors.primary.contrastText,
+          backgroundColor: colors.button.primary.main,
+          color: colors.button.primary.text,
           '&:hover': {
-            background: 'linear-gradient(135deg, #1d4ed8 0%, #047857 100%)',
-            transform: 'translateY(-1px)',
+            backgroundColor: colors.button.primary.hover,
+          },
+          '&:disabled': {
+            backgroundColor: colors.grey[300],
+            color: colors.grey[500],
           },
         },
         containedSecondary: {
-          backgroundColor: colors.secondary.main,
-          color: colors.secondary.contrastText,
+          backgroundColor: colors.button.secondary.main,
+          color: colors.button.secondary.text,
+          border: `1px solid ${colors.button.secondary.border}`,
+          boxShadow: `0px 2px 4px ${colors.button.secondary.shadow}`,
           '&:hover': {
-            backgroundColor: colors.secondary.dark,
+            backgroundColor: colors.button.secondary.hover,
+            borderColor: colors.primary.main,
+            color: colors.primary.main,
           },
         },
         outlined: {
-          borderWidth: '1px',
+          borderWidth: '2px',
+          borderColor: 'currentColor',
+          backgroundColor: 'transparent',
           '&:hover': {
-            borderWidth: '1px',
+            borderWidth: '2px',
+            backgroundColor: 'rgba(37, 99, 235, 0.04)',
+          },
+        },
+        outlinedPrimary: {
+          borderColor: colors.primary.main,
+          color: colors.primary.main,
+          '&:hover': {
+            backgroundColor: 'rgba(37, 99, 235, 0.04)',
+            borderColor: colors.primary.dark,
+          },
+        },
+        text: {
+          color: colors.primary.main,
+          '&:hover': {
+            backgroundColor: 'rgba(37, 99, 235, 0.04)',
           },
         },
       },

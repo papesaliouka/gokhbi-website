@@ -6,25 +6,25 @@
  */
 
 export const colors = {
-  // Primary palette - matching login form gradient
+  // Primary palette - Simplified and consistent
   primary: {
-    main: '#2563eb',      // Blue from login gradient
+    main: '#2563eb',      // Blue principal
     light: '#3b82f6',
     dark: '#1d4ed8',
     contrastText: '#FFFFFF'
   },
-  // Secondary palette - matching login form gradient
+  // Secondary palette - Simplified and consistent
   secondary: {
-    main: '#059669',      // Green from login gradient
+    main: '#059669',      // Vert secondaire
     light: '#10b981',
     dark: '#047857',
     contrastText: '#FFFFFF'
   },
-  // Extended palette
-  success: { main: '#059669', light: '#10b981', dark: '#047857' },
-  warning: { main: '#f59e0b', light: '#fbbf24', dark: '#d97706' },
-  error: { main: '#dc2626', light: '#ef4444', dark: '#b91c1c' },
-  info: { main: '#2563eb', light: '#3b82f6', dark: '#1d4ed8' },
+  // Simplified palette - only essential colors
+  success: { main: '#059669', light: '#10b981', dark: '#047857', contrastText: '#FFFFFF' },
+  warning: { main: '#f59e0b', light: '#fbbf24', dark: '#d97706', contrastText: '#FFFFFF' },
+  error: { main: '#dc2626', light: '#ef4444', dark: '#b91c1c', contrastText: '#FFFFFF' },
+  info: { main: '#2563eb', light: '#3b82f6', dark: '#1d4ed8', contrastText: '#FFFFFF' },
   // Neutrals
   grey: {
     50: '#f9fafb',
@@ -83,6 +83,35 @@ export const colors = {
     permits: '#0891b2',      // Cyan
     quality: '#16a34a',      // Bright green
   },
+  // Button-specific colors for consistent styling
+  button: {
+    primary: {
+      main: '#2563eb',
+      hover: '#1d4ed8',
+      text: '#ffffff',
+      shadow: 'rgba(37, 99, 235, 0.25)'
+    },
+    secondary: {
+      main: '#ffffff',
+      hover: '#f8fafc',
+      text: '#2563eb',
+      border: '#e2e8f0',
+      shadow: 'rgba(0, 0, 0, 0.1)'
+    },
+    success: {
+      main: '#059669',
+      hover: '#047857',
+      text: '#ffffff',
+      shadow: 'rgba(5, 150, 105, 0.25)'
+    },
+    outlined: {
+      main: 'transparent',
+      hover: 'rgba(255, 255, 255, 0.1)',
+      text: '#ffffff',
+      border: '#ffffff',
+      shadow: 'rgba(255, 255, 255, 0.2)'
+    }
+  }
 };
 
 // Named color exports for direct use
@@ -92,3 +121,9 @@ export const ERROR_RED = colors.error.main;
 export const WARNING_ORANGE = colors.warning.main;
 export const SUCCESS_GREEN = colors.success.main;
 export const INFO_BLUE = colors.info.main;
+
+// Button color exports for easy access
+export const BUTTON_PRIMARY = colors.button.primary;
+export const BUTTON_SECONDARY = colors.button.secondary;
+export const BUTTON_SUCCESS = colors.button.success;
+export const BUTTON_OUTLINED = colors.button.outlined;

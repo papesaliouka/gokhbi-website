@@ -48,16 +48,17 @@ const LandingPage: React.FC = () => {
             size="large"
             href="/contact"
             sx={{ 
-              bgcolor: 'white', 
-              color: 'success.main',
+              backgroundColor: colors.button.success.main,
+              color: colors.button.success.text,
               fontWeight: 'bold',
               px: 4,
               py: 1.5,
               fontSize: '1.1rem',
+              boxShadow: `0px 2px 4px ${colors.button.success.shadow}`,
               '&:hover': { 
-                bgcolor: 'grey.100',
+                backgroundColor: colors.button.success.hover,
                 transform: 'translateY(-2px)',
-                boxShadow: '0px 6px 20px rgba(0,0,0,0.25)'
+                boxShadow: `0px 6px 20px ${colors.button.success.shadow}`
               }
             }}
           >
@@ -94,18 +95,18 @@ const LandingPage: React.FC = () => {
               endIcon={<ArrowForward />}
               onClick={() => window.location.href = 'https://app.gokhbi.com'}
               sx={{ 
-                bgcolor: 'white', 
-                color: 'primary.main',
+                backgroundColor: colors.button.secondary.main,
+                color: colors.button.secondary.text,
                 mr: 2,
                 mb: { xs: 2, md: 0 },
-                border: '2px solid white',
+                border: `2px solid ${colors.button.secondary.border}`,
                 fontWeight: 'bold',
+                boxShadow: `0px 2px 4px ${colors.button.secondary.shadow}`,
                 '&:hover': { 
-                  bgcolor: 'primary.main',
-                  color: 'white',
-                  border: '2px solid white',
+                  backgroundColor: colors.button.secondary.hover,
+                  borderColor: colors.primary.main,
                   transform: 'translateY(-2px)',
-                  boxShadow: '0px 4px 12px rgba(0,0,0,0.25)' 
+                  boxShadow: `0px 4px 12px ${colors.button.secondary.shadow}` 
                 }
               }}
             >
@@ -116,16 +117,16 @@ const LandingPage: React.FC = () => {
               size="large"
               href="/contact"
               sx={{ 
-                color: 'white', 
-                borderColor: 'white',
+                color: colors.button.outlined.text,
+                borderColor: colors.button.outlined.border,
                 borderWidth: '2px',
                 mr: 2,
                 mb: { xs: 2, md: 0 },
                 fontWeight: 'bold',
+                backgroundColor: colors.button.outlined.main,
                 '&:hover': { 
-                  bgcolor: 'white',
-                  color: 'primary.main',
-                  borderColor: 'white',
+                  backgroundColor: colors.button.outlined.hover,
+                  borderColor: colors.button.outlined.border,
                   borderWidth: '2px',
                   transform: 'translateY(-2px)'
                 }
@@ -139,14 +140,15 @@ const LandingPage: React.FC = () => {
               href="/GokhBI-Brochure-Produit-Senegal.pdf"
               download="GokhBI-Brochure-Produit-Senegal.pdf"
               sx={{ 
-                bgcolor: 'success.main', 
-                color: 'white',
+                backgroundColor: colors.button.success.main,
+                color: colors.button.success.text,
                 border: '2px solid transparent',
                 fontWeight: 'bold',
+                boxShadow: `0px 2px 4px ${colors.button.success.shadow}`,
                 '&:hover': { 
-                  bgcolor: 'success.dark',
+                  backgroundColor: colors.button.success.hover,
                   transform: 'translateY(-2px)',
-                  boxShadow: '0px 4px 12px rgba(0,0,0,0.25)'
+                  boxShadow: `0px 4px 12px ${colors.button.success.shadow}`
                 }
               }}
             >
@@ -826,13 +828,12 @@ const LandingPage: React.FC = () => {
           <Box sx={{ mt: 4 }}>
             <Button
               variant="contained"
+              color="primary"
               size="large"
               onClick={() => window.location.href = 'https://app.gokhbi.com/login'}
               sx={{ 
-                bgcolor: 'white', 
-                color: 'primary.main',
                 mr: 2,
-                '&:hover': { bgcolor: 'grey.100' }
+                fontWeight: 'bold'
               }}
             >
               Commencer Maintenant
@@ -842,9 +843,14 @@ const LandingPage: React.FC = () => {
               size="large"
               href="/contact"
               sx={{ 
-                color: 'white', 
-                borderColor: 'white',
-                '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' }
+                color: colors.button.outlined.text,
+                borderColor: colors.button.outlined.border,
+                backgroundColor: colors.button.outlined.main,
+                fontWeight: 'bold',
+                '&:hover': { 
+                  backgroundColor: colors.button.outlined.hover,
+                  borderColor: colors.button.outlined.border
+                }
               }}
             >
               Nous Contacter
