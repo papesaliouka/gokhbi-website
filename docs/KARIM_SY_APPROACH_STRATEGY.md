@@ -59,7 +59,7 @@ Merci d'avance pour votre temps.
 Cordialement,
 [Votre nom]
 Fondateur GokhBI
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 📱 +221 77 206 10 56
 ```
 
@@ -135,7 +135,7 @@ Phase pilote en cours avec communes intéressées.
 
 Merci !
 [Prénom] - Zone01
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 ```
 
 ## 🎯 **Éléments Clés à Mentionner**

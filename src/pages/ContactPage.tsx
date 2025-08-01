@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
     const body = encodeURIComponent(
       `Nom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    const mailtoLink = `mailto:papesaliouka@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:contact@gokhbi.com?subject=${subject}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -128,7 +128,7 @@ const ContactPage: React.FC = () => {
                 📱 <strong>WhatsApp :</strong> +221 77 206 10 56
               </Typography>
               <Typography paragraph>
-                📧 <strong>Email :</strong> papesaliouka@gmail.com
+                📧 <strong>Email :</strong> contact@gokhbi.com
               </Typography>
               <Typography paragraph>
                 🌐 <strong>Site web :</strong> www.gokhbi.com

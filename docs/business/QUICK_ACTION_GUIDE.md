@@ -41,7 +41,7 @@ Résultat pour nos béta-testeurs : -60% temps de traitement, satisfaction citoy
 
 Nous lançons un programme pilote GRATUIT pour 3 organisations.
 
-Contactez-moi : +221 77 206 10 56 ou papesaliouka@gmail.com
+Contactez-moi : +221 77 206 10 56 ou contact@gokhbi.com
 
 Merci !"
 ```
@@ -89,7 +89,7 @@ Nous lançons un programme pilote GRATUIT pour 3 organisations.
 Cordialement,
 Pape Saliouka Ciss
 📱 +221 77 206 10 56
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 ```
 
 2. **Sauvegarder comme brouillon** dans Gmail
@@ -257,7 +257,7 @@ Fondateur GokhBI
 ### **Technique :**
 - [ ] Site web GokhBI fonctionne parfaitement
 - [ ] Vous pouvez faire démo live de l'app
-- [ ] Email papesaliouka@gmail.com configuré
+- [ ] Email contact@gokhbi.com configuré
 - [ ] Téléphone +221 77 206 10 56 opérationnel
 
 ### **Commercial :**

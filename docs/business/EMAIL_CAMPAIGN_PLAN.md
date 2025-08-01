@@ -62,7 +62,7 @@ Candidature simple : répondez avec vos principaux défis de gestion.
 
 Bien à vous,
 Pape Saliou ka
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 ```
 
 ### **Email 3: Témoignage & Urgence (Jour 12)**
@@ -187,7 +187,7 @@ Demo 15 min possible cette semaine ?
 
 Cordialement,
 Pape Saliouka
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 ```
 
 ## 📊 **Planning de Campagne (6 semaines)**

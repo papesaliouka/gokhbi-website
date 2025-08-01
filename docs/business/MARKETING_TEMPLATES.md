@@ -30,7 +30,7 @@ Cordialement,
 Pape Saliou Ka 
 Fondateur GokhBI
 📱 +221 77 206 10 56
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 ```
 
 ### **Email 2 : Suivi avec Vidéo (Jour +3)**
@@ -56,7 +56,7 @@ Candidature simple : répondez avec vos principaux défis de gestion.
 
 Bien à vous,
 Pape Saliou Ka
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 📱 +221 77 206 10 56
 ```
 
@@ -128,7 +128,7 @@ Demo 15 min possible cette semaine ?
 
 Cordialement,
 Pape Saliou Ka
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 📱 +221 77 206 10 56
 ```
 
@@ -167,7 +167,7 @@ C'est ça, la transformation numérique adaptée au contexte sénégalais.
 ✅ Interface simple pour tous niveaux
 ✅ Données fiables pour les bailleurs
 
-Programme pilote ouvert : papesaliouka@gmail.com
+Programme pilote ouvert : contact@gokhbi.com
 
 #DigitalSenegal #GestionCommunale #Innovation
 
@@ -402,7 +402,7 @@ Tout centralisé, rien ne se perd."
 Graphiques, statistiques, preuves photos.
 
 Programme pilote gratuit. Votre commune/ONG intéressée ?
-Contact : papesaliouka@gmail.com"
+Contact : contact@gokhbi.com"
 ```
 
 ---

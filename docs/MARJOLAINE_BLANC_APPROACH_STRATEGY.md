@@ -110,7 +110,7 @@ J'aimerais beaucoup avoir tes insights sur :
 Merci d'avance et au plaisir de te revoir !
 
 [Ton prénom]
-📧 papesaliouka@gmail.com
+📧 contact@gokhbi.com
 📱 +221 77 206 10 56
 ```
 

@@ -3,7 +3,7 @@
 ## 🎯 **Améliorations Finales Apportées**
 
 ### 1. **📞 Coordonnées Personnalisées**
-- **Email** : `papesaliouka@gmail.com`
+- **Email** : `contact@gokhbi.com`
 - **WhatsApp** : `+221 77 206 10 56`
 - **Web** : `www.gokhbi.com`
 

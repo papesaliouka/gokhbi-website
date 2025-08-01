@@ -278,7 +278,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Contact
               </Typography>
               <Typography variant="body2" color="grey.400">
-                Email: papesaliouka@gmail.com
+                Email: contact@gokhbi.com
               </Typography>
               <Typography variant="body2" color="grey.400">
                 Dakar, Sénégal

@@ -44,7 +44,7 @@ const TermsOfService: React.FC = () => {
             </Typography>
             <Typography>
               Pour toute question concernant ces conditions d'utilisation, 
-              contactez-nous à : papesaliouka@gmail.com
+              contactez-nous à : contact@gokhbi.com
             </Typography>
           </Paper>
         </Container>
