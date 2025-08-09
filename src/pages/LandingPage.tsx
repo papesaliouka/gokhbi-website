@@ -174,7 +174,7 @@ const LandingPage = () => {
                 Transformez votre gestion municipale avec une plateforme complète et intelligente
               </Typography>
               <Typography variant="body1" paragraph sx={{ opacity: 0.8 }}>
-                De Rufisque à votre commune: GokhBI digitalise le cadastre, optimise la collecte fiscale 
+                GokhBI digitalise le cadastre, optimise la collecte fiscale 
                 et modernise les services municipaux avec une technologie adaptée au contexte local.
               </Typography>
               
@@ -306,7 +306,7 @@ const LandingPage = () => {
       <Box id="screenshots" sx={{ py: 8, bgcolor: '#f8fafc', color:'black' }}>
         <Container maxWidth="lg">
           <Typography variant="h3" textAlign="center" color={"black"}  gutterBottom>
-            🖥️ Découvrez GokhBI en Action à Rufisque
+            🖥️ Découvrez GokhBI en Action
           </Typography>
           <Typography variant="h6" textAlign="center" color="black" sx={{ mb: 2 }}>
             Interface intuitive conçue pour les agents municipaux sénégalais
@@ -323,7 +323,6 @@ const LandingPage = () => {
               🎯 Visualisez Votre Commune Transformée
             </Typography>
             <Typography variant="body1" color={"black"} sx={{ opacity: 0.9 }}>
-              Ces captures d'écran montrent GokhBI utilisé par la Commune de Rufisque avec de vraies données.
               Projetez-vous : voici exactement à quoi ressemblera la gestion de votre commune.
             </Typography>
           </Box>
@@ -758,106 +757,7 @@ const LandingPage = () => {
         </Container>
       </Box>
 
-      {/* Success Metrics */}
-      <Box sx={{ py: 8, bgcolor: '#10b981', color: 'white' }}>
-        <Container maxWidth="lg">
-          <Typography variant="h3" textAlign="center" gutterBottom>
-            📊 Résultats Concrets à Rufisque
-          </Typography>
-          <Grid container spacing={4} sx={{ mt: 2 }}>
-            <Grid item xs={12} md={4}>
-              <Paper sx={{ 
-                p: 4, 
-                textAlign: 'center',
-                background: 'rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(10px)',
-                color: 'white'
-              }}>
-                <Typography variant="h2" fontWeight="bold">
-                  2
-                </Typography>
-                <Typography variant="h6">
-                  Propriétés Enregistrées
-                </Typography>
-                <Typography variant="body2" sx={{ mt: 1, opacity: 0.9 }}>
-                  Dans le quartier Diokoul avec calcul automatique des taxes
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Paper sx={{ 
-                p: 4, 
-                textAlign: 'center',
-                background: 'rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(10px)',
-                color: 'white'
-              }}>
-                <Typography variant="h2" fontWeight="bold">
-                  10
-                </Typography>
-                <Typography variant="h6">
-                  Inspections Commerciales
-                </Typography>
-                <Typography variant="body2" sx={{ mt: 1, opacity: 0.9 }}>
-                  Collecte de données terrain par l'agent municipal
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Paper sx={{ 
-                p: 4, 
-                textAlign: 'center',
-                background: 'rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(10px)',
-                color: 'white'
-              }}>
-                <Typography variant="h2" fontWeight="bold">
-                  24K
-                </Typography>
-                <Typography variant="h6">
-                  XOF Collecté
-                </Typography>
-                <Typography variant="body2" sx={{ mt: 1, opacity: 0.9 }}>
-                  Revenus annuels avec potentiel de croissance identifié
-                </Typography>
-              </Paper>
-            </Grid>
-          </Grid>
-
-          {/* Special Offers Section */}
-          <Grid container spacing={3} sx={{ mt: 4 }}>
-            <Grid item xs={12} md={6}>
-              <Paper sx={{ 
-                p: 3, 
-                background: 'linear-gradient(135deg, #1e40af 0%, #2563eb 100%)',
-                color: 'white' 
-              }}>
-                <Typography variant="h6" gutterBottom fontWeight="bold">
-                  🎁 Programme Pilote Gratuit
-                </Typography>
-                <Typography variant="body2">
-                  Les 5 premières municipalités bénéficient de 3 mois gratuits avec formation complète 
-                  et accompagnement personnalisé. Aucun engagement, aucun frais caché.
-                </Typography>
-                <Button 
-                  variant="contained" 
-                  sx={{ 
-                    mt: 2, 
-                    bgcolor: 'white', 
-                    color: 'success.main',
-                    '&:hover': { bgcolor: 'grey.100' }
-                  }}
-                >
-                  Postuler au Programme
-                </Button>
-              </Paper>
-            </Grid>
-    
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* Call to Action Section */}
+       {/* Call to Action Section */}
       <Box sx={{ py: 8, bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>
         <Container maxWidth="lg">
           <Typography variant="h3" gutterBottom>
