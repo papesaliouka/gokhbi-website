@@ -16,6 +16,10 @@
       "dest": "/GokhBI-Brochure-Produit-Senegal.pdf"
     },
     {
+      "src": "/(.*\\.png)",
+      "dest": "/$1"
+    },
+    {
       "src": "/(privacy|terms|about|features|contact)",
       "dest": "/index.html"
     },

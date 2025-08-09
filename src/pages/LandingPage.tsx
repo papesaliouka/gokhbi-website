@@ -57,7 +57,7 @@ const LandingPage = () => {
       features: ["Potentiel fiscal identifié", "Suivi des paiements", "Cartographie intégrée", "Couches de données"],
       icon: <Dashboard />,
       highlight: "Interface intuitive pour gestionnaires municipaux",
-      realData: false,
+      realData: true,
       projectionText: "Visualisez en un coup d'œil l'état financier de votre commune. Comme à Rufisque, suivez vos revenus en temps réel et identifiez immédiatement les opportunités d'optimisation fiscale."
     },
     {
@@ -67,7 +67,7 @@ const LandingPage = () => {
       features: ["Informations propriétaire complètes", "Types de propriété (Résidentiel, Commercial, etc.)", "Évaluation fiscale automatique", "Localisation par quartier"],
       icon: <Home />,
       highlight: "Formulaire complet adapté au contexte sénégalais",
-      realData: false,
+      realData: true,
       projectionText: "Enregistrez chaque propriété de votre commune avec précision. Interface simple et intuitive qui permet à vos agents de saisir toutes les informations nécessaires pour une fiscalité optimale."
     },
     {
@@ -77,7 +77,7 @@ const LandingPage = () => {
       features: ["Vue tabulaire claire", "Statuts Payé/Impayé identifiés", "Potentiel fiscal par propriété", "Actions rapides disponibles"],
       icon: <Assessment />,
       highlight: "Suivi simplifié pour les agents municipaux",
-      realData: false,
+      realData: true,
       projectionText: "Gérez l'ensemble de votre patrimoine foncier d'un seul regard. Chaque propriété, chaque statut de paiement, chaque opportunité de revenus clairement visible et actionnable."
     },
     {
@@ -87,7 +87,7 @@ const LandingPage = () => {
       features: ["Records de collecte organisés", "Inspections d'établissements commerciaux", "Recensement des propriétés", "Statuts de validation clairs"],
       icon: <PhoneAndroid />,
       highlight: "Interface mobile-first pour agents terrain",
-      realData: false,
+      realData: true,
       projectionText: "Vos agents terrain disposent d'un outil professionnel pour leurs missions. Chaque inspection, chaque collecte est tracée, validée et contribue directement aux revenus municipaux."
     },
     {
@@ -97,7 +97,7 @@ const LandingPage = () => {
       features: ["Interface de traitement satellite", "Analyse de l'évolution urbaine", "Détection de nouvelles constructions", "Évaluation des risques"],
       icon: <Map />,
       highlight: "Technologie satellite accessible aux communes",
-      realData: false,
+      realData: true,
       projectionText: "Surveillez l'évolution de votre territoire grâce à l'imagerie satellite. Détectez automatiquement les nouvelles constructions non déclarées et maximisez votre potentiel fiscal."
     },
     {
@@ -107,7 +107,7 @@ const LandingPage = () => {
       features: ["Traitement automatique", "Détection de changements", "Analyse de végétation", "Monitoring urbain"],
       icon: <Layers />,
       highlight: "IA appliquée à la gestion territoriale",
-      realData: false,
+      realData: true,
       projectionText: "L'intelligence artificielle travaille pour votre commune. Analyse automatique des images satellite pour identifier chaque nouvelle construction, chaque changement qui peut générer des revenus supplémentaires."
     }
   ];
