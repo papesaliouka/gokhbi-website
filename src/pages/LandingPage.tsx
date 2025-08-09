@@ -270,90 +270,68 @@ const LandingPage = () => {
             </Grid>
 
             {/* Interactive Demo Preview */}
-            <Grid item xs={12} md={6}>
-              <Box sx={{ 
-                position: 'relative',
-                perspective: '1000px'
-              }}>
-                <Paper
-                  elevation={10}
-                  sx={{
-                    p: 3,
-                    background: 'white',
-                    borderRadius: 3,
-                    transform: 'rotateY(-5deg) rotateX(5deg)',
-                    transition: 'transform 0.3s ease',
-                    '&:hover': {
-                      transform: 'rotateY(0deg) rotateX(0deg) scale(1.02)'
-                    }
-                  }}
-                >
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                    <Dashboard sx={{ color: 'primary.main', mr: 1 }} />
-                    <Typography variant="h6" color="text.primary">
-                      Tableau de Bord - Commune de Rufisque
-                    </Typography>
-                  </Box>
-                  <Grid container spacing={2}>
-                    <Grid item xs={6}>
-                      <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
-                        <Typography variant="h5" color="primary.main" fontWeight="bold">
-                          24,000
-                        </Typography>
-                        <Typography variant="caption" color="text.secondary">
-                          XOF Collecté (Annuel)
-                        </Typography>
+              <Grid item xs={12} lg={6} key={""}>
+                <Zoom in={true} style={{ transitionDelay: `${1 * 200}ms` }}>
+                  <Card 
+                    sx={{ 
+                      height: '100%',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      border: '3px solid' ,
+                      borderColor: 'primary.main',
+                      '&:hover': {
+                        transform: 'translateY(-4px)',
+                        boxShadow: 6
+                      }
+                    }}
+
+                  >
+                    {/* Image Section */}
+                    <Box sx={{ 
+                      height: 300,
+                      backgroundImage: `url(/Dashboard.png)`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      position: 'relative',
+                      '&::before': {
+                        content: '""',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3))',
+                        borderRadius: '4px 4px 0 0'
+                      }
+                    }}>
+                      <Box sx={{ 
+                        position: 'absolute',
+                        top: 16,
+                        left: 16,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1
+                      }}>
+                        <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
+                          {}
+                        </Avatar>
+                        {true && (
+                          <Chip 
+                            label="🎯 Données Réelles" 
+                            size="small" 
+                            sx={{ 
+                              bgcolor: 'success.main',
+                              color: 'white',
+                              fontWeight: 'bold'
+                            }}
+                          />
+                        )}
                       </Box>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
-                        <Typography variant="h5" color="success.main" fontWeight="bold">
-                          4
-                        </Typography>
-                        <Typography variant="caption" color="text.secondary">
-                          Licences Actives
-                        </Typography>
-                      </Box>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <LinearProgress 
-                        variant="determinate" 
-                        value={65} 
-                        sx={{ 
-                          height: 10, 
-                          borderRadius: 5,
-                          bgcolor: 'grey.200',
-                          '& .MuiLinearProgress-bar': {
-                            borderRadius: 5,
-                            bgcolor: 'success.main'
-                          }
-                        }}
-                      />
-                      <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
-                        Taux de Recouvrement: 65%
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                  <Divider sx={{ my: 2 }} />
-                  <List dense>
-                    <ListItem>
-                      <ListItemIcon><LocationOn color="primary" /></ListItemIcon>
-                      <ListItemText 
-                        primary="2 Propriétés enregistrées" 
-                        secondary="Quartier Diokoul"
-                      />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><Store color="success" /></ListItemIcon>
-                      <ListItemText 
-                        primary="10 Inspections commerciales" 
-                        secondary="Cette semaine"
-                      />
-                    </ListItem>
-                  </List>
-                </Paper>
-              </Box>
-            </Grid>
+                    </Box>
+                  </Card>
+                </Zoom>
+              </Grid>
           </Grid>
         </Container>
       </Box>
