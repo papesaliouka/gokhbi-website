@@ -15,8 +15,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Divider,
-  LinearProgress,
   Fade,
   Zoom
 } from '@mui/material';
@@ -26,10 +24,7 @@ import {
   Map,
   Dashboard,
   Assessment,
-  Store,
   Home,
-  LocationOn,
-  Receipt,
   PhoneAndroid,
   Layers
 } from '@mui/icons-material';
@@ -62,7 +57,7 @@ const LandingPage = () => {
       features: ["Potentiel fiscal identifié", "Suivi des paiements", "Cartographie intégrée", "Couches de données"],
       icon: <Dashboard />,
       highlight: "Interface intuitive pour gestionnaires municipaux",
-      realData: true,
+      realData: false,
       projectionText: "Visualisez en un coup d'œil l'état financier de votre commune. Comme à Rufisque, suivez vos revenus en temps réel et identifiez immédiatement les opportunités d'optimisation fiscale."
     },
     {
@@ -72,7 +67,7 @@ const LandingPage = () => {
       features: ["Informations propriétaire complètes", "Types de propriété (Résidentiel, Commercial, etc.)", "Évaluation fiscale automatique", "Localisation par quartier"],
       icon: <Home />,
       highlight: "Formulaire complet adapté au contexte sénégalais",
-      realData: true,
+      realData: false,
       projectionText: "Enregistrez chaque propriété de votre commune avec précision. Interface simple et intuitive qui permet à vos agents de saisir toutes les informations nécessaires pour une fiscalité optimale."
     },
     {
@@ -82,7 +77,7 @@ const LandingPage = () => {
       features: ["Vue tabulaire claire", "Statuts Payé/Impayé identifiés", "Potentiel fiscal par propriété", "Actions rapides disponibles"],
       icon: <Assessment />,
       highlight: "Suivi simplifié pour les agents municipaux",
-      realData: true,
+      realData: false,
       projectionText: "Gérez l'ensemble de votre patrimoine foncier d'un seul regard. Chaque propriété, chaque statut de paiement, chaque opportunité de revenus clairement visible et actionnable."
     },
     {
@@ -92,7 +87,7 @@ const LandingPage = () => {
       features: ["Records de collecte organisés", "Inspections d'établissements commerciaux", "Recensement des propriétés", "Statuts de validation clairs"],
       icon: <PhoneAndroid />,
       highlight: "Interface mobile-first pour agents terrain",
-      realData: true,
+      realData: false,
       projectionText: "Vos agents terrain disposent d'un outil professionnel pour leurs missions. Chaque inspection, chaque collecte est tracée, validée et contribue directement aux revenus municipaux."
     },
     {
@@ -102,7 +97,7 @@ const LandingPage = () => {
       features: ["Interface de traitement satellite", "Analyse de l'évolution urbaine", "Détection de nouvelles constructions", "Évaluation des risques"],
       icon: <Map />,
       highlight: "Technologie satellite accessible aux communes",
-      realData: true,
+      realData: false,
       projectionText: "Surveillez l'évolution de votre territoire grâce à l'imagerie satellite. Détectez automatiquement les nouvelles constructions non déclarées et maximisez votre potentiel fiscal."
     },
     {
@@ -112,7 +107,7 @@ const LandingPage = () => {
       features: ["Traitement automatique", "Détection de changements", "Analyse de végétation", "Monitoring urbain"],
       icon: <Layers />,
       highlight: "IA appliquée à la gestion territoriale",
-      realData: true,
+      realData: false,
       projectionText: "L'intelligence artificielle travaille pour votre commune. Analyse automatique des images satellite pour identifier chaque nouvelle construction, chaque changement qui peut générer des revenus supplémentaires."
     }
   ];
@@ -230,7 +225,7 @@ const LandingPage = () => {
                   variant="contained"
                   size="large"
                   endIcon={<ArrowForward />}
-                  href="/demo"
+                  href="#screenshots"
                   sx={{ 
                     backgroundColor: colors.button.success.main,
                     color: colors.button.success.text,
@@ -245,27 +240,9 @@ const LandingPage = () => {
                     }
                   }}
                 >
-                  Voir la Démo Live
+                Explorer les Fonctionnalités
                 </Button>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  href="#screenshots"
-                  sx={{ 
-                    color: colors.button.outlined.text,
-                    borderColor: colors.button.outlined.border,
-                    borderWidth: '2px',
-                    fontWeight: 'bold',
-                    backgroundColor: colors.button.outlined.main,
-                    '&:hover': { 
-                      backgroundColor: colors.button.outlined.hover,
-                      borderColor: colors.button.outlined.border,
-                      transform: 'translateY(-2px)'
-                    }
-                  }}
-                >
-                  Explorer les Fonctionnalités
-                </Button>
+
               </Box>
             </Grid>
 
@@ -316,17 +293,6 @@ const LandingPage = () => {
                         <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
                           {}
                         </Avatar>
-                        {true && (
-                          <Chip 
-                            label="🎯 Données Réelles" 
-                            size="small" 
-                            sx={{ 
-                              bgcolor: 'success.main',
-                              color: 'white',
-                              fontWeight: 'bold'
-                            }}
-                          />
-                        )}
                       </Box>
                     </Box>
                   </Card>
@@ -337,12 +303,12 @@ const LandingPage = () => {
       </Box>
 
       {/* Screenshots Section */}
-      <Box id="screenshots" sx={{ py: 8, bgcolor: '#f8fafc' }}>
+      <Box id="screenshots" sx={{ py: 8, bgcolor: '#f8fafc', color:'black' }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" textAlign="center" gutterBottom>
+          <Typography variant="h3" textAlign="center" color={"black"}  gutterBottom>
             🖥️ Découvrez GokhBI en Action à Rufisque
           </Typography>
-          <Typography variant="h6" textAlign="center" color="text.secondary" sx={{ mb: 2 }}>
+          <Typography variant="h6" textAlign="center" color="black" sx={{ mb: 2 }}>
             Interface intuitive conçue pour les agents municipaux sénégalais
           </Typography>
           <Box sx={{ 
@@ -353,10 +319,10 @@ const LandingPage = () => {
             borderRadius: 2,
             color: 'white'
           }}>
-            <Typography variant="h5" fontWeight="bold" gutterBottom>
+            <Typography variant="h5" color={'black'} fontWeight="bold" gutterBottom>
               🎯 Visualisez Votre Commune Transformée
             </Typography>
-            <Typography variant="body1" sx={{ opacity: 0.9 }}>
+            <Typography variant="body1" color={"black"} sx={{ opacity: 0.9 }}>
               Ces captures d'écran montrent GokhBI utilisé par la Commune de Rufisque avec de vraies données.
               Projetez-vous : voici exactement à quoi ressemblera la gestion de votre commune.
             </Typography>
@@ -698,77 +664,6 @@ const LandingPage = () => {
             </Box>
           </Paper>
 
-          {/* Feature Highlights */}
-          <Paper sx={{ mt: 6, p: 4, bgcolor: 'primary.main', color: 'white' }}>
-            <Typography variant="h5" gutterBottom textAlign="center">
-              ✨ Fonctionnalités Clés Testées à Rufisque
-            </Typography>
-            <Typography variant="body1" textAlign="center" sx={{ mb: 3, opacity: 0.9 }}>
-              Ces captures d'écran montrent GokhBI en action avec de vraies données municipales
-            </Typography>
-            <Grid container spacing={3} sx={{ mt: 2 }}>
-              <Grid item xs={12} md={3}>
-                <Box textAlign="center">
-                  <Receipt sx={{ fontSize: 48, mb: 1, opacity: 0.9 }} />
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    Données Fiscales Réelles
-                  </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                    24,000 XOF collecté, potentiel fiscal identifié
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box textAlign="center">
-                  <LocationOn sx={{ fontSize: 48, mb: 1, opacity: 0.9 }} />
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    Quartiers Mappés
-                  </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                    Diokoul, Cité Police, Médina - géolocalisation précise
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box textAlign="center">
-                  <Store sx={{ fontSize: 48, mb: 1, opacity: 0.9 }} />
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    Inspections Terrain
-                  </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                    10 établissements commerciaux inspectés
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box textAlign="center">
-                  <Assessment sx={{ fontSize: 48, mb: 1, opacity: 0.9 }} />
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    Analyse Satellite
-                  </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                    Évolution urbaine et détection automatique
-                  </Typography>
-                </Box>
-              </Grid>
-            </Grid>
-            
-            <Box sx={{ 
-              mt: 4, 
-              p: 3, 
-              bgcolor: 'rgba(255,255,255,0.1)', 
-              borderRadius: 2,
-              textAlign: 'center'
-            }}>
-              <Typography variant="h6" gutterBottom>
-                🎯 Proof of Concept Validé à Rufisque
-              </Typography>
-              <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                Ces captures montrent GokhBI utilisé par la Commune de Rufisque avec des données réelles. 
-                L'interface est intuitive, les agents municipaux l'adoptent rapidement, et les résultats sont concrets.
-              </Typography>
-            </Box>
-          </Paper>
         </Container>
       </Box>
 
@@ -934,7 +829,7 @@ const LandingPage = () => {
             <Grid item xs={12} md={6}>
               <Paper sx={{ 
                 p: 3, 
-                background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
+                background: 'linear-gradient(135deg, #1e40af 0%, #2563eb 100%)',
                 color: 'white' 
               }}>
                 <Typography variant="h6" gutterBottom fontWeight="bold">
@@ -957,224 +852,7 @@ const LandingPage = () => {
                 </Button>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper sx={{ 
-                p: 3, 
-                background: 'linear-gradient(135deg, #1e40af 0%, #2563eb 100%)',
-                color: 'white' 
-              }}>
-                <Typography variant="h6" gutterBottom fontWeight="bold">
-                  🤝 Financement Bailleurs
-                </Typography>
-                <Typography variant="body2">
-                  Votre projet est financé par la Banque Mondiale, l'AFD ou l'USAID ? 
-                  Bénéficiez de tarifs préférentiels et d'un accompagnement spécifique.
-                </Typography>
-                <Button 
-                  variant="contained" 
-                  sx={{ 
-                    mt: 2, 
-                    bgcolor: 'white', 
-                    color: 'primary.main',
-                    '&:hover': { bgcolor: 'grey.100' }
-                  }}
-                >
-                  En Savoir Plus
-                </Button>
-              </Paper>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* Pricing Section Updated */}
-      <Box id="pricing" sx={{ py: 8, bgcolor: '#fef3c7' }}>
-        <Container maxWidth="lg">
-          <Typography variant="h3" textAlign="center" gutterBottom color="#d97706">
-            💰 Tarification Adaptée à Votre Commune
-          </Typography>
-          <Typography variant="h6" textAlign="center" sx={{ mb: 4, color: '#92400e' }}>
-            Investissement rentabilisé dès le premier trimestre
-          </Typography>
-          
-          <Grid container spacing={4} sx={{ mt: 2 }}>
-            <Grid item xs={12} md={4}>
-              <Card sx={{ 
-                height: '100%', 
-                textAlign: 'center', 
-                border: '2px solid #d97706',
-                position: 'relative'
-              }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Typography variant="h5" gutterBottom>
-                    🏘️ Communes Rurales
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    &lt; 10,000 habitants
-                  </Typography>
-                  <Typography variant="h3" color="#d97706" fontWeight="bold" sx={{ my: 3 }}>
-                    50K
-                  </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    FCFA/mois
-                  </Typography>
-                  <Divider sx={{ my: 3 }} />
-                  <List>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Cadastre digital de base" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="5 comptes utilisateurs" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Application mobile" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Formation initiale" />
-                    </ListItem>
-                  </List>
-                  <Button 
-                    variant="contained" 
-                    fullWidth 
-                    sx={{ 
-                      mt: 3,
-                      bgcolor: '#d97706',
-                      '&:hover': { bgcolor: '#b45309' }
-                    }}
-                  >
-                    Démarrer l'Essai
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Card sx={{ 
-                height: '100%', 
-                textAlign: 'center', 
-                border: '3px solid #059669',
-                position: 'relative',
-                transform: 'scale(1.05)'
-              }}>
-                <Chip 
-                  label="RECOMMANDÉ" 
-                  color="success" 
-                  sx={{ 
-                    position: 'absolute',
-                    top: -15,
-                    left: '50%',
-                    transform: 'translateX(-50%)'
-                  }}
-                />
-                <CardContent sx={{ p: 4 }}>
-                  <Typography variant="h5" gutterBottom>
-                    🏙️ Villes Moyennes
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    10,000 - 100,000 habitants
-                  </Typography>
-                  <Typography variant="h3" color="#059669" fontWeight="bold" sx={{ my: 3 }}>
-                    150K
-                  </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    FCFA/mois
-                  </Typography>
-                  <Typography variant="caption" color="success.main">
-                    + 2% sur transactions digitales
-                  </Typography>
-                  <Divider sx={{ my: 3 }} />
-                  <List>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Toutes les fonctionnalités" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Utilisateurs illimités" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Analyse satellite" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Intégration paiements" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="success" /></ListItemIcon>
-                      <ListItemText primary="Support prioritaire" />
-                    </ListItem>
-                  </List>
-                  <Button 
-                    variant="contained" 
-                    fullWidth 
-                    color="success"
-                    sx={{ mt: 3 }}
-                  >
-                    Commencer Maintenant
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Card sx={{ 
-                height: '100%', 
-                textAlign: 'center', 
-                border: '2px solid #1e40af',
-                position: 'relative'
-              }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Typography variant="h5" gutterBottom>
-                    🌆 Grandes Métropoles
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    &gt; 100,000 habitants
-                  </Typography>
-                  <Typography variant="h3" color="#1e40af" fontWeight="bold" sx={{ my: 3 }}>
-                    Sur Mesure
-                  </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    Tarification personnalisée
-                  </Typography>
-                  <Divider sx={{ my: 3 }} />
-                  <List>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
-                      <ListItemText primary="Solution entreprise" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
-                      <ListItemText primary="Infrastructure dédiée" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
-                      <ListItemText primary="API & intégrations" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
-                      <ListItemText primary="Équipe support dédiée" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
-                      <ListItemText primary="Développement sur mesure" />
-                    </ListItem>
-                  </List>
-                  <Button 
-                    variant="outlined" 
-                    fullWidth 
-                    color="primary"
-                    sx={{ mt: 3 }}
-                  >
-                    Contactez-nous
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
+    
           </Grid>
         </Container>
       </Box>
@@ -1189,22 +867,6 @@ const LandingPage = () => {
             Rejoignez le mouvement de digitalisation municipale au Sénégal
           </Typography>
           <Box sx={{ mt: 4 }}>
-            <Button
-              variant="contained"
-              size="large"
-              href="/demo"
-              sx={{ 
-                bgcolor: 'white',
-                color: 'primary.main',
-                mr: 2,
-                fontWeight: 'bold',
-                '&:hover': {
-                  bgcolor: 'grey.100'
-                }
-              }}
-            >
-              Calculer Votre ROI
-            </Button>
             <Button
               variant="outlined"
               size="large"

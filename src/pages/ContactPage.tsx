@@ -149,34 +149,7 @@ const ContactPage: React.FC = () => {
                 </Typography>
               </Box>
               
-              <Box sx={{ mt: 3, p: 2, bgcolor: 'success.light', borderRadius: 2, textAlign: 'center' }}>
-                <Typography variant="h6" color="white" fontWeight="bold">
-                  📞 Appelez maintenant pour votre démonstration gratuite !
-                </Typography>
-              </Box>
-              
-              <Box sx={{ mt: 3, p: 2, bgcolor: 'info.light', borderRadius: 2, textAlign: 'center' }}>
-                <Typography variant="h6" color="white" fontWeight="bold" gutterBottom>
-                  📄 Documentation Complète
-                </Typography>
-                <Typography variant="body2" color="white" sx={{ mb: 2, opacity: 0.9 }}>
-                  Téléchargez notre brochure avec tous les détails techniques et tarifs
-                </Typography>
-                <Button
-                  variant="contained"
-                  href="/GokhBI-Brochure-Produit-Senegal.pdf"
-                  download="GokhBI-Brochure-Produit-Senegal.pdf"
-                  sx={{ 
-                    bgcolor: 'white', 
-                    color: 'info.main',
-                    '&:hover': { 
-                      bgcolor: 'grey.100'
-                    }
-                  }}
-                >
-                  📄 Télécharger la Brochure
-                </Button>
-              </Box>
+
             </Box>
           </Paper>
         </Container>

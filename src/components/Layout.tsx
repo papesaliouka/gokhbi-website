@@ -36,10 +36,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const navigationItems = [
     { label: 'Accueil', path: '/' },
-    { label: 'Fonctionnalités', path: '/features' },
-    { label: 'À Propos', path: '/about' },
     { label: 'Contact', path: '/contact' },
-    { label: '📄 Brochure', path: '/GokhBI-Brochure-Produit-Senegal.pdf', isDownload: true }
   ];
 
   const handleNavigation = (path: string) => {
@@ -66,18 +63,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Divider />
         <List>
           {navigationItems.map((item) => (
-            item.isDownload ? (
-              <ListItem
-                key={item.path}
-                button
-                component="a"
-                href={item.path}
-                download="GokhBI-Brochure.pdf"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <ListItemText primary={item.label} />
-              </ListItem>
-            ) : (
+           
               <ListItem
                 key={item.path}
                 button
@@ -89,12 +75,10 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               >
                 <ListItemText primary={item.label} />
               </ListItem>
-            )
+            
           ))}
           <Divider sx={{ my: 1 }} />
-          <ListItem button onClick={() => window.location.href = 'https://app.gokhbi.com/login'}>
-            <ListItemText primary="Connexion" />
-          </ListItem>
+
         </List>
       </Box>
     </Drawer>
@@ -133,28 +117,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             {!isMobile && (
               <Box sx={{ display: 'flex', alignItems: 'center', ml: 'auto' }}>
                 {navigationItems.map((item) => (
-                  item.isDownload ? (
-                    <Button
-                      key={item.path}
-                      component="a"
-                      href={item.path}
-                      download="GokhBI-Brochure-Produit-Senegal.pdf"
-                      sx={{
-                        color: 'white',
-                        mx: 1,
-                        '&:hover': {
-                          backgroundColor: 'rgba(255,255,255,0.1)'
-                        }
-                      }}
-                    >
-                      {item.label}
-                    </Button>
-                  ) : (
-                    <Button
-                      key={item.path}
-                      onClick={() => handleNavigation(item.path)}
-                      sx={{
-                        color: 'white',
+                  <Button
+                    key={item.path}
+                    onClick={() => handleNavigation(item.path)}
+                    sx={{
+                      color: 'white',
                         mx: 1,
                         backgroundColor: isActivePage(item.path) ? 'rgba(255,255,255,0.1)' : 'transparent',
                         '&:hover': {
@@ -164,23 +131,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     >
                       {item.label}
                     </Button>
-                  )
+                  
                 ))}
-                <Button
-                  variant="outlined"
-                  onClick={() => window.location.href = 'https://app.gokhbi.com/login'}
-                  sx={{
-                    color: 'white',
-                    borderColor: 'white',
-                    ml: 2,
-                    '&:hover': {
-                      backgroundColor: 'rgba(255,255,255,0.1)',
-                      borderColor: 'white'
-                    }
-                  }}
-                >
-                  Connexion
-                </Button>
+
               </Box>
             )}
 
@@ -234,25 +187,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Liens Rapides
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Link href="/features" color="grey.400" underline="hover">
-                  Fonctionnalités
-                </Link>
-                <Link href="/about" color="grey.400" underline="hover">
-                  À Propos
-                </Link>
                 <Link href="/contact" color="grey.400" underline="hover">
                   Contact
-                </Link>
-                <Link 
-                  href="/GokhBI-Brochure-Produit-Senegal.pdf" 
-                  download="GokhBI-Brochure-Produit-Senegal.pdf"
-                  color="grey.400" 
-                  underline="hover"
-                >
-                  📄 Télécharger Brochure
-                </Link>
-                <Link href="https://app.gokhbi.com/login" color="grey.400" underline="hover">
-                  Connexion
                 </Link>
               </Box>
             </Box>
